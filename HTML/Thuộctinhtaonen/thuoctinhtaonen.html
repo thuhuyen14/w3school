@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>
+           Background-image.
+        </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="taonen.css">
+    <style>
+        html, body{
+            margin: 0;
+    
+        }
+        .header {
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://i.pinimg.com/564x/24/17/7a/24177a43cccd0bd2334d43ed7ec18eda.jpg),url(https://i.pinimg.com/564x/55/21/5a/55215aae19474ebe2a32576113670f33.jpg);
+            /* ảnh nào để trước sẽ ở dưới */
+            /* background-image: linear-gradient(90deg, #fff, rgb(139, 164, 214)); */
+            background-size: 400px;
+           /* background-size: contain; */
+            /* (hiện thị đầy đủ hình ảnh và chấp nhận bị hở khoảng trắng) */
+/* background-size: cover; (hiện thị một phần của hình ảnh và chấp nhận che khuất, cắt xén đi
+một phần của hình ảnh, luôn luôn full toàn màn hình). */
+            background-repeat: no-repeat;
+            /* repeat-x hoặc y sẽ lặp lại chiều ngang hoặc dọc */
+            padding: 20px;
+            border: 20px dashed #ccc;
+            box-sizing: border-box;
+            background-origin: border-box;
+            /* thay bang content-box hay padding-box de thay su thay doi */
+            background-position: top 20px right 20px;
+            /* nếu viết 20px 30px sẽ tự mặc định là left 20px top 30px */
+
+
+        /* cú pháp ngắn gọn thay hết những câu trên background: url(...) no-repeat center / contain; */}
+    </style>
+    </head> 
+    <body> 
+        <div class="header"></div>
+    </body>
+    </html>

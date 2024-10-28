@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>
+            Padding?
+        </title>
+    <meta charset="utf-8">
+    </head>
+    <style>
+        .box{
+            width:60px;
+            height:60px;
+            color:#fff;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+        }
+        .box1 {
+            background-color:#333;
+            border: 10px solid rgb(1,16,24);
+
+        }
+        .box2{
+            background-color: orange;
+            border: 10px solid rgb(100,321,235);
+            margin-left: 50px;
+
+        }
+        .box3{
+            background-color: blue;
+            padding-top:10px; 
+            padding-right:10px;
+            padding-left:10px;
+            padding-bottom:10px; 
+            /* nếu chỉ viết 2 tham số padding: 10px 12px sẽ hiểu là 10px: trên dưới, 12px: trái phải, 3 tham số thì số đầu là
+            trên, 2 là trái phải, 3 là dưới; 4 tham số thì
+            theo thứ tứ trên phải dưới trái */
+            border-width: 10px;
+            /* có thể để border-top-width or border-bottom-width;....
+            do để solid nên nếu chỉ để mỗi 1 chiều border thì những chiều còn
+            lại vẫn có một lớp viền solid bao quanh. Vậy để những chiều còn lại k có thì để 0px */
+            border-style: solid;
+            border-color:blanchedalmond;
+            /* cách viêt nhanh: border: 10px solid #333 */
+        }
+
+    </style>
+    <body>
+      <div class="box box1">Box 1</div>  
+      <div class="box box2">Box 2</div>  
+      <div class="box box3">Box 3</div>  
+    </body>
+</html>

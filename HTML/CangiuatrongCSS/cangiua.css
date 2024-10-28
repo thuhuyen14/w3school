@@ -1,0 +1,31 @@
+
+.box{
+    background-color: orange;
+    height: 100px;
+    /* display: flex;
+    align-items: center;
+    justify-content:space-between; */
+    position: relative;
+}
+h3{
+    /* căn giữa theo chiều ngang: text-align: center ; */
+    /* hoặc cho text-align vào thẻ box cũng đc h3 sẽ kế thừa thuộc tính đó */
+    /* line-height: 100px; */
+    /* chiều cao bằng chính chiều cao của box chứa nó */
+    /* margin: auto; */
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+h3::after{
+    content: "";
+    border-left: 3px solid #333;
+    height: 50px;
+    top: 50%;
+    transform: translate(-50%);
+    /* => ý nghĩa của transform: translateY(-50%) là chia đôi
+     độ cao của cái hộp đen có chứa chữ “Center Me” và dịch ngược
+      lại lên phía trên ( 50% ở đây là 1 nửa độ cao của hộp đen và dấu “-” là dịch ngược lại hướng ) */
+}

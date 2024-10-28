@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>wed</title>
+<meta charset="utf-8">
+<style>
+.box {
+width: 50%;
+height: 100px;
+/* height không được để ở dạng % nếu không sẽ k tạo đc khối */
+background: rgb(160, 100, 122);
+}
+.box::before{
+    content:"đây là box before";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+.box::after{
+    content:"đây là box after";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+}
+h1::first-letter{
+    font-size: 50px;
+    color: green;
+}
+h2::selection{
+    background-color: pink;
+
+}
+</style>
+</head>
+<body>
+<div class="box"></div>
+<h1>CSS Pseudo-Elements<br/>
+DÒng thứ hai </h1>
+<h2>Bôi đen dòng này sẽ thấy màu hồng </h2>
+<ul>
+    <li>::before</li>
+    <li>::after</li>
+    <li>::first-letter</li>
+    <li>::first-line</li>
+    <li>::selection</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Position</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="position">
+    <style>
+        html, body{
+            margin:0;
+        }
+        h1{
+            position: relative;
+            top: 0px;
+            /* so sánh với margin: 100px, thì margin dịch tất cả xuống
+            relative thì giữ nguyên vị trí của các dòng dưới */
+        }
+        li:nth-of-type(2) {
+            color: violet;
+        }
+        .box{
+            width: 100%;
+            height: 120px;
+            background-color: #333;
+            position: relative;
+        }
+        .box-child {
+           width:50px;
+           height: 50px;
+            background-color: rgba(255,255,255,0.5);
+            position: absolute;
+            /* thẻ position phụ thuộc vào thẻ có position gần nhất có nghĩa là
+            nó sẽ xét từ trong ra, thẻ nào có position trước thì nó nhận thẻ ấy
+            là thẻ cha */
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+
+        }
+        .box2{
+            width: 300px;
+            height: 100px;
+            background-color: violet ;
+            position: relative;
+            /* để absolute cũng được, khi đó box2 là con của box */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div>
+        <div class="box2">
+            <div class="box-child "></div>
+        </div>
+    </div>
+    </div>
+    <h1>Position</h1>
+    <ul>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <!-- Absolute: xài khi 1 đối tượng phụ thuộc vào 1 đối tượng khác
+Fixed: xài khi 1 đối tượng phụ thuộc vào cửa sổ trình duyệt
+khi gắn fixed vào element thì nó sẽ đứng yên, gắn với trình duyệt dù ta có cuộn lên or xuống -->
+        <li>Sticky</li>
+    </ul>
+</body>
+</html>

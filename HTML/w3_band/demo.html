@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Responsive</title>
+    <style>
+        h1{
+            font-size: 80px;
+        }
+        .pc,
+        .tablet,
+        .mobile {
+            font-size: 68px;
+            display:none;
+        }
+
+        @media(max-width:800px){
+            /* đoạn CSS chỉ chạy khi độ rộng tối đa là 800px */
+            .pc,
+        .tablet,
+        .mobile {
+            color: red;
+        }
+
+        }
+        /* BREAK POINT */
+      /* PC */
+        @media (min-width:1024px){
+
+        }
+        /* Tablet */
+        @media (min-width:740px) and (max-width:1023px){
+
+        }
+        /* Mobile */
+        @media (max-width:740px){
+
+        }
+
+        /* 
+        PC: >=1024px
+        Tablet:>=740px & <!024px
+        Mobile: <740px
+        */
+    </style>
+</head>
+<body>
+    <h1>MEDIA QUERIES</h1>
+    <h2 class="pc">PC</h2>
+    <h2 class="tablet">TABLET</h2>
+    <h2 class="mobile">MOBILE</h2>
+</body>
+</html>

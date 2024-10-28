@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CAC DON VI TRONG CSS </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="donvi.css">
+        <style>
+            html{
+                font-size:30px;
+            }
+            .box{
+               /* 50% là relative units, thay đổi kích thước theo trình duyệt */
+                width: 50%;
+                height: 100px;
+                background-color: rgb(136, 218, 235);
+            }
+            /* rem là phụ thuộc vào html, html là 40px thì h1 = 1 rem =40px */
+            /* em thì phụ thuộc vào thẻ chứa nó gần nhất, ví dụ ở h1
+            thì rộng ra xét xem div có font-size k, k có thì rộng lên body
+            , tiếp theo là html */
+            h1{
+                font-size: 1rem;
+            }
+            /* vw-width, vh-height;
+            viewport */
+            /* phân biệt % và vw: để width=50% thì nó bằng 50% thẻ chứa nó, trong
+            trường hợp này là thẻ body; còn 50vw = 50% kích thước trình duyệt */
+            h3{font-size:1rem;}
+            a::after {
+                content:"("attr(href)")";
+            }
+            .box::after{
+                content: attr(data-title);
+            }
+       </style>
+    </head>
+    <body>
+        <div class="box" data-title="Đây là box màu xanh!"></div>
+        <div >
+            <h1>CSS Units?</h1>
+            <h2>1.Absolute units?</h2>
+            <ul>
+                <li>px</li>
+                <li>pt</li>
+                <li>cm</li>
+                <li>mm</li>
+                <li>inch</li>
+                <li>pc</li>
+            </ul>
+            <h2>2.Relative units?</h2>
+            <ul>
+                <li>%</li>
+                <li>rem</li>
+                <li>em</li>
+                <li>vw</li>
+                <li>vh</li>
+                <li>vmin</li>
+            </ul>
+        <h3>Một số hàm trong CSS </h3>
+<ul>
+    <li>var()</li>
+    <li>linear-gradient()</li>
+    <li>rgba()</li>
+    <!-- rgba là trong suốt -->
+    <li>rgb()</li>
+    <li>calc()</li>
+    <li>attr</li>
+    <a href="http://fullstack.edu.vn"> Học lập trình</a>
+</ul>
+        </div>
+    </body>
+</html>
